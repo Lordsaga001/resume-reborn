@@ -1,0 +1,128 @@
+/* Black & ORANGE-GOLD (solid colour, no gradients) - loads AFTER styles.css */
+:root {
+  --gold: #e0a100;          /* main orange-gold */
+  --gold-deep: #b87800;     /* darker, for text on white and borders */
+  --gold-light: #f5b400;    /* brighter, for hover and glow */
+  --gold-rgb: 224, 161, 0;
+
+  --bs-primary: #e0a100;
+  --bs-primary-rgb: 224, 161, 0;
+  --bs-warning: #e0a100;
+  --bs-warning-rgb: 224, 161, 0;
+  --bs-link-color: #b87800;
+  --bs-link-hover-color: #8f5c00;
+}
+
+/* ---------- Sidebar ---------- */
+#sideNav,
+#sideNav.bg-primary {
+  background: #111111 !important;
+  border-right: 8px solid var(--gold);
+  box-shadow: 6px 0 24px rgba(var(--gold-rgb), 0.3);
+}
+#sideNav .navbar-nav .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 800;
+  border-left: 5px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+#sideNav .navbar-nav .nav-item .nav-link:hover,
+#sideNav .navbar-nav .nav-item .nav-link.active {
+  color: var(--gold-light);
+  border-left-color: var(--gold);
+  background: rgba(var(--gold-rgb), 0.12);
+}
+#sideNav .navbar-brand {
+  color: var(--gold-light);
+  font-weight: 800;
+}
+#sideNav .navbar-toggler {
+  border: 3px solid var(--gold);
+}
+#sideNav .navbar-toggler:focus {
+  outline-color: var(--gold);
+  box-shadow: 0 0 0 0.25rem rgba(var(--gold-rgb), 0.4);
+}
+#sideNav .navbar-brand .img-profile {
+  border: 8px solid var(--gold);
+  box-shadow: 0 0 0 3px #000, 0 0 20px rgba(var(--gold-rgb), 0.6);
+}
+
+/* ---------- Headings ---------- */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: #111111;
+  font-weight: 800;
+}
+h2 {
+  display: inline-block;
+  padding-bottom: 0.4rem;
+  border-bottom: 8px solid var(--gold);
+}
+
+/* ---------- Gold text (name, dates) ---------- */
+.text-primary {
+  color: var(--gold-deep) !important;
+  font-weight: 800;
+}
+h1 .text-primary {
+  color: var(--gold) !important;
+  font-weight: 900;
+}
+
+/* Trophy icons */
+.text-warning {
+  color: var(--gold) !important;
+}
+.fa-ul .fa-li {
+  font-size: 1.2em;
+}
+
+/* ---------- Social icons ---------- */
+.social-icons .social-icon {
+  background: #111111;
+  color: var(--gold);
+  border: 4px solid var(--gold);
+  transition: all 0.3s ease;
+}
+.social-icons .social-icon:hover {
+  background: var(--gold);
+  color: #111111;
+  transform: translateY(-4px);
+}
+
+/* ---------- Dividers ---------- */
+hr {
+  border: 0;
+  height: 8px;
+  opacity: 1;
+  background: var(--gold);
+}
+
+/* ---------- Buttons, forms, misc (for later use) ---------- */
+.btn-primary {
+  --bs-btn-color: #111111;
+  --bs-btn-bg: #e0a100;
+  --bs-btn-border-color: #b87800;
+  --bs-btn-hover-color: #111111;
+  --bs-btn-hover-bg: #f5b400;
+  --bs-btn-hover-border-color: #b87800;
+  --bs-btn-active-color: #111111;
+  --bs-btn-active-bg: #f5b400;
+  --bs-btn-active-border-color: #b87800;
+  --bs-btn-focus-shadow-rgb: 224, 161, 0;
+  border-width: 3px;
+  font-weight: 800;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 0.25rem rgba(var(--gold-rgb), 0.3);
+}
+.form-check-input:checked {
+  background-color: var(--gold);
+  border-color: var(--gold-deep);
+}
+.progress {
+  --bs-progress-bar-bg: #e0a100;
+  --bs-progress-height: 1.5rem;
+}
